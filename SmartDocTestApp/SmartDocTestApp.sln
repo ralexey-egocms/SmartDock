@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartDocTestApp.Core", "SmartDocTestApp\SmartDocTestApp\SmartDocTestApp.Core.csproj", "{BAA1EB01-2F9B-42C2-934D-E0A6431EA7ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartDocTestApp.Droid", "SmartDocTestApp\SmartDocTestApp.Droid\SmartDocTestApp.Droid.csproj", "{DEDC84DE-1BED-48CB-A8EF-A05950E263AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAA1EB01-2F9B-42C2-934D-E0A6431EA7ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAA1EB01-2F9B-42C2-934D-E0A6431EA7ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAA1EB01-2F9B-42C2-934D-E0A6431EA7ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAA1EB01-2F9B-42C2-934D-E0A6431EA7ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEDC84DE-1BED-48CB-A8EF-A05950E263AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEDC84DE-1BED-48CB-A8EF-A05950E263AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEDC84DE-1BED-48CB-A8EF-A05950E263AA}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DEDC84DE-1BED-48CB-A8EF-A05950E263AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEDC84DE-1BED-48CB-A8EF-A05950E263AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEDC84DE-1BED-48CB-A8EF-A05950E263AA}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
