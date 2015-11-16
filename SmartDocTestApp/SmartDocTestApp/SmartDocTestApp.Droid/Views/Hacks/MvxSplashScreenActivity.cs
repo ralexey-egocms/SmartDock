@@ -20,7 +20,12 @@ namespace SmartDocTestApp.Droid
 
         private readonly int _resourceId;
 
-        protected LocalSplashScreenActivity(int resourceId = NoContent)
+
+        public LocalSplashScreenActivity()
+        {
+        }
+
+        public LocalSplashScreenActivity(int resourceId = NoContent)
         {
             _resourceId = resourceId;
         }

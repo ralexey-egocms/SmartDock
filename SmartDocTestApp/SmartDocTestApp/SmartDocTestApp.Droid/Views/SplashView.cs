@@ -1,8 +1,10 @@
 using Android.App;
 using Android.Content.PM;
 using Android.OS;
+using Cirrious.CrossCore;
 using Cirrious.MvvmCross.Droid.Views;
 using Java.Util;
+using SmartDocTestApp.Core.Services.Interfaces;
 using SmartDocTestApp.Core.ViewModels;
 
 namespace SmartDocTestApp.Droid
@@ -14,21 +16,21 @@ namespace SmartDocTestApp.Droid
         , Theme = "@style/Theme.Splash"
         , NoHistory = true
         , ScreenOrientation = ScreenOrientation.Portrait)]
-    public class SplashView : LocalSplashScreenActivity
+    public class SplashView : MvxSplashScreenActivity
     {
         public SplashView()
             : base(Resource.Layout.view_splash)
         {
         }
 
-        public new SplashViewModel ViewModel
-        {
-            get { return (SplashViewModel)base.ViewModel; }
-        }
+        //public new SplashViewModel ViewModel
+        //{
+        //    get { return (SplashViewModel)base.ViewModel; }
+        //}
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            this.ViewModel.Locale = Locale.Default.Language;
+            Mvx.Resolve<ICurrentStateService>().SetupTextProvider(Locale.Default.Language);
         }
     }
 }

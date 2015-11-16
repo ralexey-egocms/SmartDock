@@ -1,5 +1,5 @@
 using Cirrious.CrossCore;
-//using Cirrious.MvvmCross.Plugins.JsonLocalisation;
+using Cirrious.MvvmCross.Plugins.JsonLocalisation;
 using Cirrious.MvvmCross.ViewModels;
 
 namespace SmartDocTestApp.Core.ViewModels
@@ -7,16 +7,25 @@ namespace SmartDocTestApp.Core.ViewModels
     public class SplashViewModel 
 		: BaseViewModel
     {
-        //readonly IMvxTextProviderBuilder _builder;
+        readonly IMvxTextProviderBuilder _builder;
 
-        //public SplashViewModel() {
-        //    _builder = Mvx.Resolve<IMvxTextProviderBuilder>();
-        //}
+        public SplashViewModel()
+        {
+            _builder = Mvx.Resolve<IMvxTextProviderBuilder>();
+        }
 
 
         void PickLanguage(string which)
         {
-            //_builder.LoadResources(which);
+            try
+            {
+                _builder.LoadResources(which);
+            }
+            catch (System.Exception)
+            {
+
+                throw;
+            }
         }
 
 

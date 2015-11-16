@@ -1,7 +1,7 @@
 using Cirrious.CrossCore;
 using Cirrious.CrossCore.IoC;
 using Cirrious.MvvmCross.Localization;
-//using Cirrious.MvvmCross.Plugins.JsonLocalisation;
+using Cirrious.MvvmCross.Plugins.JsonLocalisation;
 using SmartDocTestApp.Core.Services;
 
 namespace SmartDocTestApp.Core
@@ -21,10 +21,10 @@ namespace SmartDocTestApp.Core
 
         private void InitializeText()
         {
-            //var builder = new TextProviderBuilder();
+            var builder = new TextProviderBuilder();
 
-            //Mvx.RegisterSingleton<IMvxTextProviderBuilder>(builder);
-            //Mvx.RegisterSingleton<IMvxTextProvider>(builder.TextProvider);
+            Mvx.RegisterSingleton<IMvxTextProviderBuilder>(builder);
+            Mvx.RegisterSingleton<IMvxTextProvider>(builder.TextProvider);
         }
     }
 }
