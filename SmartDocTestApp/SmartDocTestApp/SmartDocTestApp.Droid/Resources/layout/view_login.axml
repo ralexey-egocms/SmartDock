@@ -3,48 +3,72 @@
     xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:background="@color/primary">
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        android:weightSum="2">
-        <EditText
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textSize="40dp"
-            local:MvxBind="Text Hello"
-            android:layout_weight="1" />
+        android:layout_height="75dp"
+        android:orientation="vertical"
+        android:weightSum="3"
+        android:background="@android:color/background_dark">
         <TextView
-            android:background="#aabbcc"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textSize="40dp"
-            local:MvxBind="Text Hello"
-            android:layout_weight="1" />
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:textSize="20dp"
+            android:hint="Username"
+            local:MvxLang="Text Login"
+            android:layout_weight="1"
+            android:textColor="@color/secondary_text" />
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:textSize="20dp"
+            android:hint="Username"
+            local:MvxBind="Text Login"
+            local:MvxLang="Hint LoginHint"
+            android:layout_weight="2"
+            android:textColor="@color/primary_text"
+            android:textColorHint="@color/secondary_text" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        android:weightSum="2">
-        <EditText
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textSize="40dp"
-            local:MvxBind="Text Hello"
-            android:layout_weight="1" />
+        android:layout_height="75dp"
+        android:orientation="vertical"
+        android:weightSum="3"
+        android:background="@android:color/background_dark">
         <TextView
-            android:background="#aabbcc"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textSize="40dp"
-            local:MvxBind="Text Hello"
-            android:layout_weight="1" />
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:textSize="20dp"
+            android:hint="Password"
+            local:MvxLang="Text Password"
+            android:layout_weight="1"
+            android:textColor="@color/secondary_text" />
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:textSize="20dp"
+            android:hint="Password"
+            local:MvxBind="Text Password"
+            local:MvxLang="Hint PasswordHint"
+            android:layout_weight="2"
+            android:textColor="@color/primary_text"
+            android:textColorHint="@color/secondary_text" />
     </LinearLayout>
     <Button
         android:id="@+id/myButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello" />
+        local:MvxLang="Text OnLoginButton"
+        local:MvxBind="Click OnLoginCommand"
+        android:background="@color/icons"
+        android:textColor="@color/secondary_text" />
+    <TextView
+        android:text="Error text"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/error_message"
+        android:gravity="center"
+        android:textColor="@android:color/holo_red_light" />
 </LinearLayout>

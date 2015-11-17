@@ -12,15 +12,21 @@ using Android.Widget;
 using SmartDocTestApp.Core.Services.Interfaces;
 using Cirrious.MvvmCross.Plugins.JsonLocalisation;
 using Cirrious.CrossCore;
+using Java.Util;
 
 namespace SmartDocTestApp.Droid.Services
 {
-    public class CurrentStateService : ICurrentStateService
-    {
-        public void SetupTextProvider(string lang)
-        {
-            var _builder = Mvx.Resolve<IMvxTextProviderBuilder>();
-            _builder.LoadResources(lang);
-        }
-    }
+	public class CurrentStateService : ICurrentStateService
+	{
+		List<string> _curLocals = new List<string> () {
+			"no",
+		};
+
+		public void SetupTextProvider ()
+		{
+			string lang = Java.Util.Locale.Default.Language;
+			var _builder = Mvx.Resolve<IMvxTextProviderBuilder> ();
+			_builder.LoadResources (_curLocals.Contains (lang) ? lang : "");
+		}
+	}
 }

@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace SmartDocTestApp.Core.Services.Interfaces
 {
-    public interface ICurrentStateService
-    {
-        void SetupTextProvider(string lang);
-    }
+	public interface ICurrentStateService
+	{
+		void SetupTextProvider ();
+	}
 }
