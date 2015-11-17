@@ -2,52 +2,52 @@ using Cirrious.CrossCore;
 using Cirrious.MvvmCross.Localization;
 using Cirrious.MvvmCross.Plugins.JsonLocalisation;
 using Cirrious.MvvmCross.ViewModels;
+using SmartDocTestApp.Core.Services.Interfaces;
 
 namespace SmartDocTestApp.Core.ViewModels
 {
-    public class BaseViewModel
+	public class BaseViewModel
         : MvxViewModel
-    {
-        public BaseViewModel() {
-            
-        }
-        #region Locallization
+	{
+		protected readonly ICurrentStateService _currentStateService;
 
-        public IMvxLanguageBinder TextSource
-        {
-            get
-            {
-                var x = new MvxLanguageBinder(Helper.SmartDockConstants.GeneralNamespace, this.GetType().Name);
-                return x;
-            }
-        }
+		public BaseViewModel ()
+		{
+			_currentStateService = Mvx.Resolve<ICurrentStateService> ();
+		}
 
-        IMvxTextProvider _textProvider;
+		#region Locallization
 
-        IMvxTextProvider TextProvider
-        {
-            get
-            {
-                if (_textProvider == null)
-                {
-                    _textProvider = Mvx.Resolve<IMvxTextProvider>();
-                }
-                return _textProvider;
-            }
-        }
+		public IMvxLanguageBinder TextSource {
+			get {
+				var x = new MvxLanguageBinder (Helper.SmartDockConstants.GeneralNamespace, this.GetType ().Name);
+				return x;
+			}
+		}
 
-        public string GetLocalizedError(string field)
-        {
-            return GetLocalizedText(Helper.SmartDockConstants.ErrorsResource, field);
-        }
+		IMvxTextProvider _textProvider;
 
-        public string GetLocalizedText(string source, string field)
-        {
-            return TextProvider.GetText(Helper.SmartDockConstants.GeneralNamespace, source, field);
-        }
+		IMvxTextProvider TextProvider {
+			get {
+				if (_textProvider == null) {
+					_textProvider = Mvx.Resolve<IMvxTextProvider> ();
+				}
+				return _textProvider;
+			}
+		}
 
-        #endregion
+		public string GetLocalizedError (string field)
+		{
+			return GetLocalizedText (Helper.SmartDockConstants.ErrorsResource, field);
+		}
+
+		public string GetLocalizedText (string source, string field)
+		{
+			return TextProvider.GetText (Helper.SmartDockConstants.GeneralNamespace, source, field);
+		}
+
+		#endregion
 
 
-    }
+	}
 }

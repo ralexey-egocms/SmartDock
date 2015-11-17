@@ -13,11 +13,18 @@ using SmartDocTestApp.Core.Services.Interfaces;
 using Cirrious.MvvmCross.Plugins.JsonLocalisation;
 using Cirrious.CrossCore;
 using Java.Util;
+using SmartDocTestApp.Core;
 
 namespace SmartDocTestApp.Droid.Services
 {
 	public class CurrentStateService : ICurrentStateService
 	{
+
+		public LoginObject CurrentUser {
+			get;
+			set;
+		}
+
 		List<string> _curLocals = new List<string> () {
 			"no",
 		};

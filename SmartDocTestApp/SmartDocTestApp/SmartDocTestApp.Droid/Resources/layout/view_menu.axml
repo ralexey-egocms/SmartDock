@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -12,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/menu_list"
-        local:MvxBind="ItemsSource TestProp"
-        local:MvxItemTemplate="@layout/list_inspection_row_new" />
+        local:MvxBind="ItemsSource MenuItemSourse"
+        local:MvxItemTemplate="@layout/item_menu"
+        android:layout_margin="10dp" />
 </LinearLayout>

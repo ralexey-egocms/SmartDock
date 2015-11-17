@@ -92,6 +92,25 @@
     <Reference Include="Cirrious.MvvmCross.Plugins.ResourceLoader.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\packages\MvvmCross.HotTuna.Plugin.ResourceLoader.3.5.1\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.ResourceLoader.Droid.dll</HintPath>
     </Reference>
+    <Reference Include="XamSvg.Shared">
+      <HintPath>..\..\packages\Softlion.XamSvg.Free.1.5.0.1\lib\MonoAndroid\XamSvg.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="XamSvg.Droid">
+      <HintPath>..\..\packages\Softlion.XamSvg.Free.1.5.0.1\lib\MonoAndroid\XamSvg.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks">
+      <HintPath>..\..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net45+win8+wpa81\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions">
+      <HintPath>..\..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net45+win8+wpa81\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\monoandroid\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\monoandroid\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SmartDocTestApp\SmartDocTestApp.Core.csproj">
@@ -114,6 +133,7 @@
     <Compile Include="Views\SplashView.cs" />
     <Compile Include="Views\LoginView.cs" />
     <Compile Include="Views\BaseView.cs" />
+    <Compile Include="Services\PreferencesService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -132,6 +152,11 @@
     <AndroidResource Include="Resources\layout\view_splash.axml" />
     <AndroidResource Include="Resources\layout\view_login.axml" />
     <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\layout\item_menu.axml" />
+    <AndroidResource Include="Resources\drawable\logo.png" />
+    <AndroidResource Include="Resources\layout\actionbar_layout.axml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\menu\menu_menuview.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\view_menu.axml" />
@@ -156,4 +181,8 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
   </Target>
+  <ItemGroup>
+    <Folder Include="Resources\raw\" />
+    <Folder Include="Resources\menu\" />
+  </ItemGroup>
 </Project>

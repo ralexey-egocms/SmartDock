@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="fill_horizontal"
+    android:orientation="horizontal"
+    android:background="@color/primary_dark">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:layout_centerInParent="true">
+        <ImageView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon"
+            android:layout_gravity="center" />
+        <TextView
+            android:text="SmartDok"
+            android:layout_toRightOf="@+id/icon"
+            android:id="@+id/text_right"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:paddingRight="5dp"
+            android:textSize="25dp"
+            android:textColor="@color/primary_text" />
+    </LinearLayout>
+</RelativeLayout>

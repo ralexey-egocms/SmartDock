@@ -26,31 +26,52 @@ namespace SmartDocTestApp.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::XamSvg.Resource.Attribute.colorMapping = global::SmartDocTestApp.Droid.Resource.Attribute.colorMapping;
+			global::XamSvg.Resource.Attribute.colorMappingSelected = global::SmartDocTestApp.Droid.Resource.Attribute.colorMappingSelected;
+			global::XamSvg.Resource.Attribute.svg = global::SmartDocTestApp.Droid.Resource.Attribute.svg;
+			global::XamSvg.Resource.Attribute.useCache = global::SmartDocTestApp.Droid.Resource.Attribute.useCache;
+			global::XamSvg.Resource.Styleable.SvgImageView = global::SmartDocTestApp.Droid.Resource.Styleable.SvgImageView;
+			global::XamSvg.Resource.Styleable.SvgImageView_colorMapping = global::SmartDocTestApp.Droid.Resource.Styleable.SvgImageView_colorMapping;
+			global::XamSvg.Resource.Styleable.SvgImageView_colorMappingSelected = global::SmartDocTestApp.Droid.Resource.Styleable.SvgImageView_colorMappingSelected;
+			global::XamSvg.Resource.Styleable.SvgImageView_svg = global::SmartDocTestApp.Droid.Resource.Styleable.SvgImageView_svg;
+			global::XamSvg.Resource.Styleable.SvgImageView_useCache = global::SmartDocTestApp.Droid.Resource.Styleable.SvgImageView_useCache;
 		}
 		
 		public partial class Attribute
 		{
 			
-			// aapt resource value: 0x7f010005
-			public const int GroupItemTemplate = 2130771973;
-			
-			// aapt resource value: 0x7f010000
-			public const int MvxBind = 2130771968;
+			// aapt resource value: 0x7f010009
+			public const int GroupItemTemplate = 2130771977;
 			
 			// aapt resource value: 0x7f010004
-			public const int MvxDropDownItemTemplate = 2130771972;
+			public const int MvxBind = 2130771972;
 			
-			// aapt resource value: 0x7f010003
-			public const int MvxItemTemplate = 2130771971;
+			// aapt resource value: 0x7f010008
+			public const int MvxDropDownItemTemplate = 2130771976;
 			
-			// aapt resource value: 0x7f010001
-			public const int MvxLang = 2130771969;
+			// aapt resource value: 0x7f010007
+			public const int MvxItemTemplate = 2130771975;
+			
+			// aapt resource value: 0x7f010005
+			public const int MvxLang = 2130771973;
+			
+			// aapt resource value: 0x7f01000a
+			public const int MvxSource = 2130771978;
 			
 			// aapt resource value: 0x7f010006
-			public const int MvxSource = 2130771974;
+			public const int MvxTemplate = 2130771974;
+			
+			// aapt resource value: 0x7f010001
+			public const int colorMapping = 2130771969;
 			
 			// aapt resource value: 0x7f010002
-			public const int MvxTemplate = 2130771970;
+			public const int colorMappingSelected = 2130771970;
+			
+			// aapt resource value: 0x7f010000
+			public const int svg = 2130771968;
+			
+			// aapt resource value: 0x7f010003
+			public const int useCache = 2130771971;
 			
 			static Attribute()
 			{
@@ -106,10 +127,13 @@ namespace SmartDocTestApp.Droid
 			public const int Icon = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int monoandroidsplash = 2130837505;
+			public const int logo = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int splash = 2130837506;
+			public const int monoandroidsplash = 2130837506;
+			
+			// aapt resource value: 0x7f020003
+			public const int splash = 2130837507;
 			
 			static Drawable()
 			{
@@ -127,11 +151,35 @@ namespace SmartDocTestApp.Droid
 			// aapt resource value: 0x7f050000
 			public const int MvxBindingTagUnique = 2131034112;
 			
+			// aapt resource value: 0x7f050006
+			public const int error_message = 2131034118;
+			
 			// aapt resource value: 0x7f050002
-			public const int error_message = 2131034114;
+			public const int icon = 2131034114;
+			
+			// aapt resource value: 0x7f050004
+			public const int item_menu_text = 2131034116;
 			
 			// aapt resource value: 0x7f050001
-			public const int myButton = 2131034113;
+			public const int linearLayout1 = 2131034113;
+			
+			// aapt resource value: 0x7f050007
+			public const int menu_list = 2131034119;
+			
+			// aapt resource value: 0x7f050009
+			public const int menu_menu_logout = 2131034121;
+			
+			// aapt resource value: 0x7f05000a
+			public const int menu_menu_settings = 2131034122;
+			
+			// aapt resource value: 0x7f050008
+			public const int menu_menu_user = 2131034120;
+			
+			// aapt resource value: 0x7f050005
+			public const int myButton = 2131034117;
+			
+			// aapt resource value: 0x7f050003
+			public const int text_right = 2131034115;
 			
 			static Id()
 			{
@@ -147,13 +195,19 @@ namespace SmartDocTestApp.Droid
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int view_login = 2130903040;
+			public const int actionbar_layout = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int view_menu = 2130903041;
+			public const int item_menu = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int view_splash = 2130903042;
+			public const int view_login = 2130903042;
+			
+			// aapt resource value: 0x7f030003
+			public const int view_menu = 2130903043;
+			
+			// aapt resource value: 0x7f030004
+			public const int view_splash = 2130903044;
 			
 			static Layout()
 			{
@@ -161,6 +215,22 @@ namespace SmartDocTestApp.Droid
 			}
 			
 			private Layout()
+			{
+			}
+		}
+		
+		public partial class Menu
+		{
+			
+			// aapt resource value: 0x7f080000
+			public const int menu_menuview = 2131230720;
+			
+			static Menu()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Menu()
 			{
 			}
 		}
@@ -187,11 +257,17 @@ namespace SmartDocTestApp.Droid
 		public partial class Style
 		{
 			
+			// aapt resource value: 0x7f060003
+			public const int Mono_Android_Theme_Splash = 2131099651;
+			
 			// aapt resource value: 0x7f060001
-			public const int Mono_Android_Theme_Splash = 2131099649;
+			public const int Theme_SmartDok = 2131099649;
 			
 			// aapt resource value: 0x7f060000
 			public const int Theme_Splash = 2131099648;
+			
+			// aapt resource value: 0x7f060002
+			public const int style_actionbar = 2131099650;
 			
 			static Style()
 			{
@@ -208,8 +284,8 @@ namespace SmartDocTestApp.Droid
 			
 			public static int[] MvxBinding = new int[]
 			{
-					2130771968,
-					2130771969};
+					2130771972,
+					2130771973};
 			
 			// aapt resource value: 0
 			public const int MvxBinding_MvxBind = 0;
@@ -219,35 +295,54 @@ namespace SmartDocTestApp.Droid
 			
 			public static int[] MvxControl = new int[]
 			{
-					2130771970};
+					2130771974};
 			
 			// aapt resource value: 0
 			public const int MvxControl_MvxTemplate = 0;
 			
 			public static int[] MvxExpandableListView = new int[]
 			{
-					2130771973};
+					2130771977};
 			
 			// aapt resource value: 0
 			public const int MvxExpandableListView_GroupItemTemplate = 0;
 			
 			public static int[] MvxImageView = new int[]
 			{
-					2130771974};
+					2130771978};
 			
 			// aapt resource value: 0
 			public const int MvxImageView_MvxSource = 0;
 			
 			public static int[] MvxListView = new int[]
 			{
-					2130771971,
-					2130771972};
+					2130771975,
+					2130771976};
 			
 			// aapt resource value: 1
 			public const int MvxListView_MvxDropDownItemTemplate = 1;
 			
 			// aapt resource value: 0
 			public const int MvxListView_MvxItemTemplate = 0;
+			
+			public static int[] SvgImageView = new int[]
+			{
+					2130771968,
+					2130771969,
+					2130771970,
+					2130771971};
+			
+			// aapt resource value: 1
+			public const int SvgImageView_colorMapping = 1;
+			
+			// aapt resource value: 2
+			public const int SvgImageView_colorMappingSelected = 2;
+			
+			// aapt resource value: 0
+			public const int SvgImageView_svg = 0;
+			
+			// aapt resource value: 3
+			public const int SvgImageView_useCache = 3;
 			
 			static Styleable()
 			{

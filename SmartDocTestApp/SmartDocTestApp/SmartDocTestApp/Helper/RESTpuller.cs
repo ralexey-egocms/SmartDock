@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 using Newtonsoft.Json;
 using System.Net;
@@ -14,17 +15,28 @@ using SmartDocTestApp.Core.Services;
 
 namespace SmartDocTestApp.Core.Helpers
 {
-    public enum RequestParams
-    {
+	public enum RequestParams
+	{
+		userName,
+		password,
+		userId,
+		token
+	}
 
-    }
+	public enum RequestMethod
+	{
+		Authenticate,
+		ForUser
+	}
 
-    public enum RequestMethod
-    {
+	public enum RequestController
+	{
+		Login,
+		Menu,
+		None
+	}
 
-    }
-
-    public class RESTinwork
+	public class RESTinwork
 	{
 		static RESTinwork _instance = new RESTinwork ();
 
@@ -32,11 +44,11 @@ namespace SmartDocTestApp.Core.Helpers
 			get { return RESTinwork._instance; }
 		}
 
-		string urlTemplate = "http://svc.inzepocket.ch/gamma/";
+		string urlTemplate = "https://www.smartdok.no/PublicAPI{0}/";
 
 		public string UrlTemplate {
 			get {
-				return urlTemplate + "{0}.asp{1}";
+				return urlTemplate + "{1}{2}";
 			}
 		}
 
@@ -53,7 +65,7 @@ namespace SmartDocTestApp.Core.Helpers
 			}
 		}
 
-		public async Task<T> Get<T> (RequestMethod method, Dictionary<RequestParams, string> parametrs = null)
+		public async Task<T> Get<T> (RequestMethod method, Dictionary<RequestParams, string> parametrs = null, RequestController controller = RequestController.None)
 		{
 			string content = "";
 			try {
@@ -61,8 +73,9 @@ namespace SmartDocTestApp.Core.Helpers
 				using (var client = new HttpClient ()) {
 					client.BaseAddress = new Uri (urlTemplate);
 					client.Timeout = new TimeSpan (0, 0, 30);
-					var response = await client.GetAsync (string.Format (UrlTemplate, method.ToString ().ToLower (), CreateParametrsString (parametrs)));//method.ToString ().ToLower () + ".asp", new FormUrlEncodedContent (raw));// new StringContent (raw, Encoding.UTF8, "application/json"));
-					//var rawContent = await response.Content.ReadAsStreamAsync(ReadAsStringAsync ();
+					var url = string.Format (UrlTemplate, controller != RequestController.None ? "/" + controller.ToString ().ToLower () : "", method.ToString ().ToLower (), CreateParametrsString (parametrs));
+//					var raw = new FormUrlEncodedContent (parametrs.ToDictionary (a => a.Key.ToString (), b => b.Value));
+					var response = await client.GetAsync (url);
 
 					if (response.StatusCode != HttpStatusCode.OK) {
 						Debug.WriteLine (String.Format ("Error fetching data. Server returned status code: {0}", response.StatusCode));
@@ -92,7 +105,7 @@ namespace SmartDocTestApp.Core.Helpers
 								{ "request",typename },
 								{ "content",content },
 							});
-							return (T)Activator.CreateInstance (typeof(T));//default(T);
+							return default(T);//(T)Activator.CreateInstance (typeof(T));//default(T);
 						} else {
 							var json = content;
 							var ass = JsonConvert.DeserializeObject<T> (json);
@@ -105,6 +118,7 @@ namespace SmartDocTestApp.Core.Helpers
 								});
 							return ass;
 						}
+//						return XMLHelper.Deserialize<T> (content);
 					}
 				}
 
@@ -117,6 +131,7 @@ namespace SmartDocTestApp.Core.Helpers
 				return default(T);
 			}
 		}
+
 
 
 		public async Task<TResponse> POST<TResponse> (RequestMethod method, Dictionary<string, string> parametrs = null)//data = null)

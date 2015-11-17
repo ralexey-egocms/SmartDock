@@ -8,6 +8,8 @@ namespace SmartDocTestApp.Core.Services.Interfaces
 {
 	public interface ICurrentStateService
 	{
+		LoginObject CurrentUser{ get; set; }
+
 		void SetupTextProvider ();
 	}
 }

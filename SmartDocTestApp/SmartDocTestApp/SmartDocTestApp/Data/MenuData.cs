@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Xml.Serialization;
 
 namespace SmartDocTestApp.Core
 {
 	public class MenuData
 	{
+		
 		public List<InstanseData> Instances { get; set; }
 	}
 

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <style name="Theme.SmartDok" parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/style_actionbar</item>
+    </style>
+
+    <style name="style_actionbar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@color/secondary_text</item>
+    </style>
+</resources>
