@@ -16,6 +16,19 @@ namespace SmartDocTestApp.Core.ViewModels
 			_webService = Mvx.Resolve<IWebService> ();
 			_preferences = Mvx.Resolve<IPreferencesService> ();
             //_menuData = _webService.GetMenuData (_currentStateService.CurrentUser);
+            _menuData = new MenuData()
+            {
+                Instances = new List<InstanseData>() { 
+                new InstanseData(){Id = 0, Name = "First"},
+                new InstanseData(){Id = 1, Name = "Second"},
+                new InstanseData(){Id = 2, Name = "Third"},
+                new InstanseData(){Id = 3, Name = "Fourth"},
+                new InstanseData(){Id = 4, Name = "Fifth"},
+                new InstanseData(){Id = 5, Name = "Sixth"},
+                new InstanseData(){Id = 6, Name = "Seventh"},
+                new InstanseData(){Id = 7, Name = "Eightth"},
+                }
+            };
 		}
 
 		private MenuData _menuData;

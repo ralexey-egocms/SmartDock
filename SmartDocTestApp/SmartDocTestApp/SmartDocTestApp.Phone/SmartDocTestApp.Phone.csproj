@@ -145,6 +145,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Icon.png" />
     <Content Include="Localization\Text\BaseViewModel.json" />
     <Content Include="Localization\Text\LoginViewModel.json" />
     <Content Include="Localization\Text\MenuViewModel.json" />

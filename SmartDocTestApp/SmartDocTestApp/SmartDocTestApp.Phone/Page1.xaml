@@ -24,23 +24,16 @@
         <StackPanel Grid.Row="0" Margin="12,17,0,28"/>
 
         <!--ContentPanel – поместите здесь дополнительное содержимое-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0" Background="#FF4B4B4B">
-            <StackPanel Height="100" Margin="10,10,10,0" VerticalAlignment="Top" Background="Black">
-                <TextBlock x:Name="login_username_label" TextWrapping="Wrap" Foreground="#FF4C4C4C"
-                           Text="{Binding TextSource,Converter={StaticResource Language},ConverterParameter=Login, FallbackValue=Login,Mode=OneTime}" />
-                <TextBox x:Name="login_username" Height="72" TextWrapping="Wrap" Foreground="#FFFFED82" 
-                         Text="{Binding Login}"
-                         />
-            </StackPanel>
-            <StackPanel HorizontalAlignment="Left" Height="100" Margin="10,115,0,0" VerticalAlignment="Top" Width="436" Background="Black">
-                <TextBlock TextWrapping="Wrap"  Foreground="#FF4C4C4C"
-                           Text="{Binding TextSource,Converter={StaticResource Language},ConverterParameter=Password, FallbackValue=Password,Mode=OneTime}"/>
-                <TextBox Height="72" TextWrapping="Wrap" Foreground="#FFFFED82"
-                         Text="{Binding Password}" />
-            </StackPanel>
-            <Button HorizontalAlignment="Left" Margin="10,220,0,0" VerticalAlignment="Top" Width="436" Background="#FFFFED82" Foreground="#FF4C4C4C" BorderBrush="{x:Null}"
-                    Command="{Binding OnLoginCommand}"
-                     Content="{Binding TextSource,Converter={StaticResource Language},ConverterParameter=OnLoginButton, FallbackValue=OnLoginButton,Mode=OneTime}"/>
+        <Grid x:Name="ContentPanel" Margin="12,0,12,0" Background="#FF4B4B4B" Grid.Row="1">
+            <phone:LongListSelector ItemsSource="{Binding MenuItemSourse}">
+                <phone:LongListSelector.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel VerticalAlignment="Top" Background="#FFFFED82" Height="50">
+                            <TextBlock FontWeight="Bold"  Text="{Binding Name}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </phone:LongListSelector.ItemTemplate>
+            </phone:LongListSelector>
 
         </Grid>
     </Grid>

@@ -76,6 +76,10 @@ namespace SmartDocTestApp.Core.ViewModels
 		public MvxCommand OnLoginCommand {
 			get { 
 				return new MvxCommand (() => {
+                    //if (_webService != null)
+                    //{
+                    //    var a = _webService.LogIn(Login, Password);
+                    //}
                     //Error = "";
                     //if (string.IsNullOrEmpty(Login))
                     //    Error = GetLocalizedError("UsernameCannotBeEmpty");
