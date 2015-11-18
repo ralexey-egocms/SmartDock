@@ -100,7 +100,7 @@ namespace SmartDocTestApp.Core.Helpers
 								Debug.WriteLine ("Method: {0} posted. Result: {1}", method.ToString (), resInt);
 								return (T)(object)resInt;
 							}
-							Debug.WriteLine ($"[{typename}]Response contained empty body or incorrect... Body:[{content}]");
+                            //Debug.WriteLine ($"[{typename}]Response contained empty body or incorrect... Body:[{content}]");
 							LoggingService.Report (null, new Dictionary<string,string> {
 								{ "request",typename },
 								{ "content",content },

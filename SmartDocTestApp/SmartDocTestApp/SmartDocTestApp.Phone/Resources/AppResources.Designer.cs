@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SmartdocTestApp.WinPhone.Resources
+namespace SmartDocTestApp.Phone.Resources
 {
     using System;
 
@@ -45,7 +45,7 @@ namespace SmartdocTestApp.WinPhone.Resources
             {
                 if (object.ReferenceEquals(resourceMan, null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SmartdocTestApp.WinPhone.Resources.AppResources", typeof(AppResources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SmartDocTestApp.Phone.Resources.AppResources", typeof(AppResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

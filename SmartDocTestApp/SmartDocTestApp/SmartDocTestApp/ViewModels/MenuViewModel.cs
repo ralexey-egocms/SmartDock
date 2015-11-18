@@ -15,7 +15,7 @@ namespace SmartDocTestApp.Core.ViewModels
 		{
 			_webService = Mvx.Resolve<IWebService> ();
 			_preferences = Mvx.Resolve<IPreferencesService> ();
-			_menuData = _webService.GetMenuData (_currentStateService.CurrentUser);
+            //_menuData = _webService.GetMenuData (_currentStateService.CurrentUser);
 		}
 
 		private MenuData _menuData;

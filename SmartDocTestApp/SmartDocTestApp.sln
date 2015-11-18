@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2012 for Windows Phone
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartDocTestApp.Core", "SmartDocTestApp\SmartDocTestApp\SmartDocTestApp.Core.csproj", "{BAA1EB01-2F9B-42C2-934D-E0A6431EA7ED}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartDocTestApp.Droid", "SmartDocTestApp\SmartDocTestApp.Droid\SmartDocTestApp.Droid.csproj", "{DEDC84DE-1BED-48CB-A8EF-A05950E263AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartdocTestApp.WinPhone", "SmartdocTestApp.WinPhone\SmartdocTestApp.WinPhone.csproj", "{7C0EBD89-3233-4AB3-94BE-920AF2B7127D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartDocTestApp.Phone", "SmartDocTestApp\SmartDocTestApp.Phone\SmartDocTestApp.Phone.csproj", "{BACB41DB-F67A-41EF-B802-438B46C6FF30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,24 +35,24 @@ Global
 		{DEDC84DE-1BED-48CB-A8EF-A05950E263AA}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{DEDC84DE-1BED-48CB-A8EF-A05950E263AA}.Release|ARM.ActiveCfg = Release|Any CPU
 		{DEDC84DE-1BED-48CB-A8EF-A05950E263AA}.Release|x86.ActiveCfg = Release|Any CPU
-		{7C0EBD89-3233-4AB3-94BE-920AF2B7127D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7C0EBD89-3233-4AB3-94BE-920AF2B7127D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7C0EBD89-3233-4AB3-94BE-920AF2B7127D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{7C0EBD89-3233-4AB3-94BE-920AF2B7127D}.Debug|ARM.ActiveCfg = Debug|ARM
-		{7C0EBD89-3233-4AB3-94BE-920AF2B7127D}.Debug|ARM.Build.0 = Debug|ARM
-		{7C0EBD89-3233-4AB3-94BE-920AF2B7127D}.Debug|ARM.Deploy.0 = Debug|ARM
-		{7C0EBD89-3233-4AB3-94BE-920AF2B7127D}.Debug|x86.ActiveCfg = Debug|x86
-		{7C0EBD89-3233-4AB3-94BE-920AF2B7127D}.Debug|x86.Build.0 = Debug|x86
-		{7C0EBD89-3233-4AB3-94BE-920AF2B7127D}.Debug|x86.Deploy.0 = Debug|x86
-		{7C0EBD89-3233-4AB3-94BE-920AF2B7127D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7C0EBD89-3233-4AB3-94BE-920AF2B7127D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7C0EBD89-3233-4AB3-94BE-920AF2B7127D}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{7C0EBD89-3233-4AB3-94BE-920AF2B7127D}.Release|ARM.ActiveCfg = Release|ARM
-		{7C0EBD89-3233-4AB3-94BE-920AF2B7127D}.Release|ARM.Build.0 = Release|ARM
-		{7C0EBD89-3233-4AB3-94BE-920AF2B7127D}.Release|ARM.Deploy.0 = Release|ARM
-		{7C0EBD89-3233-4AB3-94BE-920AF2B7127D}.Release|x86.ActiveCfg = Release|x86
-		{7C0EBD89-3233-4AB3-94BE-920AF2B7127D}.Release|x86.Build.0 = Release|x86
-		{7C0EBD89-3233-4AB3-94BE-920AF2B7127D}.Release|x86.Deploy.0 = Release|x86
+		{BACB41DB-F67A-41EF-B802-438B46C6FF30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BACB41DB-F67A-41EF-B802-438B46C6FF30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BACB41DB-F67A-41EF-B802-438B46C6FF30}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BACB41DB-F67A-41EF-B802-438B46C6FF30}.Debug|ARM.ActiveCfg = Debug|ARM
+		{BACB41DB-F67A-41EF-B802-438B46C6FF30}.Debug|ARM.Build.0 = Debug|ARM
+		{BACB41DB-F67A-41EF-B802-438B46C6FF30}.Debug|ARM.Deploy.0 = Debug|ARM
+		{BACB41DB-F67A-41EF-B802-438B46C6FF30}.Debug|x86.ActiveCfg = Debug|x86
+		{BACB41DB-F67A-41EF-B802-438B46C6FF30}.Debug|x86.Build.0 = Debug|x86
+		{BACB41DB-F67A-41EF-B802-438B46C6FF30}.Debug|x86.Deploy.0 = Debug|x86
+		{BACB41DB-F67A-41EF-B802-438B46C6FF30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BACB41DB-F67A-41EF-B802-438B46C6FF30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BACB41DB-F67A-41EF-B802-438B46C6FF30}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{BACB41DB-F67A-41EF-B802-438B46C6FF30}.Release|ARM.ActiveCfg = Release|ARM
+		{BACB41DB-F67A-41EF-B802-438B46C6FF30}.Release|ARM.Build.0 = Release|ARM
+		{BACB41DB-F67A-41EF-B802-438B46C6FF30}.Release|ARM.Deploy.0 = Release|ARM
+		{BACB41DB-F67A-41EF-B802-438B46C6FF30}.Release|x86.ActiveCfg = Release|x86
+		{BACB41DB-F67A-41EF-B802-438B46C6FF30}.Release|x86.Build.0 = Release|x86
+		{BACB41DB-F67A-41EF-B802-438B46C6FF30}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

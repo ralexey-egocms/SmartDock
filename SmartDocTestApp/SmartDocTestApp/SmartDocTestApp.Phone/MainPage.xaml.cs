@@ -7,9 +7,9 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-using SmartdocTestApp.WinPhone.Resources;
+using SmartDocTestApp.Phone.Resources;
 
-namespace SmartdocTestApp.WinPhone
+namespace SmartDocTestApp.Phone
 {
     public partial class MainPage : PhoneApplicationPage
     {

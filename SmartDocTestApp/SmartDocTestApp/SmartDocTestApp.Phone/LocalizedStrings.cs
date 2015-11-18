@@ -1,6 +1,6 @@
-﻿using SmartdocTestApp.WinPhone.Resources;
+﻿using SmartDocTestApp.Phone.Resources;
 
-namespace SmartdocTestApp.WinPhone
+namespace SmartDocTestApp.Phone
 {
     /// <summary>
     /// Предоставляет доступ к строковым ресурсам.

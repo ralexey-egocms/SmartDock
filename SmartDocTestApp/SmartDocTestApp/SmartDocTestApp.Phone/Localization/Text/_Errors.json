@@ -1,0 +1,7 @@
+﻿{
+	"PasswordNotMatch":"Username or password does not match",
+	"UsernameCannotBeEmpty":"Username cannot be empty",
+	"PasswordCannotBeEmpty":"Password cannot be empty",
+	"UnexpectedError":"An unexpected error has occurred, please try again",
+"":""
+}

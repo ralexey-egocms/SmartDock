@@ -1,0 +1,7 @@
+﻿{
+	"PasswordNotMatch":"Brukernavn eller passord stemmer ikke",
+	"UsernameCannotBeEmpty":"Brukernavn kan ikke være tom",
+	"PasswordCannotBeEmpty":"Passord kan ikke være tom",
+	"UnexpectedError":"En uventet feil har oppstått, vennligst prøv igjen",
+"":""
+}

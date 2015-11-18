@@ -76,22 +76,27 @@ namespace SmartDocTestApp.Core.ViewModels
 		public MvxCommand OnLoginCommand {
 			get { 
 				return new MvxCommand (() => {
-					Error = "";
-					if (string.IsNullOrEmpty (Login))
-						Error = GetLocalizedError ("UsernameCannotBeEmpty");
-					else if (string.IsNullOrEmpty (Password))
-						Error = GetLocalizedError ("PasswordCannotBeEmpty");
-					else {
-						_currentStateService.CurrentUser = _webService.LogIn (Login, Password);
-						if (_currentStateService.CurrentUser.IsValid) {
-							Error = "";
-							_preferences.Username = Login;
-							_preferences.Password = Password;
-							ShowViewModel<MenuViewModel> ();
-						} else {
-							Error = GetLocalizedError ("PasswordNotMatch");
-						}
-					}
+                    //Error = "";
+                    //if (string.IsNullOrEmpty(Login))
+                    //    Error = GetLocalizedError("UsernameCannotBeEmpty");
+                    //else if (string.IsNullOrEmpty(Password))
+                    //    Error = GetLocalizedError("PasswordCannotBeEmpty");
+                    //else
+                    //{
+                    //    _currentStateService.CurrentUser = _webService.LogIn(Login, Password);
+                    //    if (_currentStateService.CurrentUser.IsValid)
+                    //    {
+                    //        Error = "";
+                    //        //_preferences.Username = Login;
+                    //        //_preferences.Password = Password;
+                    //        ShowViewModel<MenuViewModel>();
+                    //    }
+                    //    else
+                    //    {
+                    //        Error = GetLocalizedError("PasswordNotMatch");
+                    //    }
+                    //}
+                    ShowViewModel<MenuViewModel>();
 				});
 			}
 		}

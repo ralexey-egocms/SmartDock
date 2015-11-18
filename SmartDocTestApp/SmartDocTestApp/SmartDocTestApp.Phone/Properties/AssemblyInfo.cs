@@ -6,11 +6,11 @@ using System.Resources;
 // Управление общими сведениями о сборке осуществляется с помощью следующего 
 // набора атрибутов. Измените значения этих атрибутов для изменения
 // сведений о сборке.
-[assembly: AssemblyTitle("SmartdocTestApp.WinPhone")]
+[assembly: AssemblyTitle("SmartDocTestApp.Phone")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SmartdocTestApp.WinPhone")]
+[assembly: AssemblyProduct("SmartDocTestApp.Phone")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -21,7 +21,7 @@ using System.Resources;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если данный проект видим для COM
-[assembly: Guid("c11c8d75-bbad-4aa5-b771-34f68843b01c")]
+[assembly: Guid("9d14e77e-c518-4762-8467-7b11608c75c7")]
 
 // Сведения о версии сборки состоят из следующих четырех значений:
 //

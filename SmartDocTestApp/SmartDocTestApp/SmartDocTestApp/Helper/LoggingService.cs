@@ -69,7 +69,7 @@ namespace SmartDocTestApp.Core.Services
 
 		static IPlatformLoggingService _logging;
 
-		public static bool Active{ get; private set; } = false;
+		public static bool Active{ get; private set; }// = false;
 
 		public static IPlatformLoggingService Logging {
 			get { 
@@ -125,7 +125,7 @@ namespace SmartDocTestApp.Core.Services
 
 		public static void Report (Exception ex, string key, string value, Severity type)
 		{
-			Report (ex, new Dictionary<string, string>{ [key ] =value }, type);
+			Report (ex, new Dictionary<string, string>{ {key,value} }, type);
 		}
 
 		public static void Report (Exception ex, Dictionary<string, string> args, Severity type)
@@ -136,11 +136,11 @@ namespace SmartDocTestApp.Core.Services
 					#region Debug Output
 					string key = "";
 					string value = "";
-					if (args != null && args?.Keys.Count > 0) {
+					if (args != null && args.Keys.Count>0){//args?.Keys.Count > 0) {
 						key = args.Keys.First ();
 						value = args [key];
 					}
-					Debug.WriteLine ($"[{type.ToString()}] {key}: {value};\n\rStackTrace:\n\r{ex?.ToString()}");
+                    Debug.WriteLine (string.Format("[{0}] {1}: {2};\n\rStackTrace:\n\r{3}", type.ToString(), key,value,ex != null ? ex.ToString():""));
 					#endregion
 				}				
 			}
@@ -157,7 +157,7 @@ namespace SmartDocTestApp.Core.Services
 
 		public static void Track (string text, string key, string value)
 		{
-			Track (text, new Dictionary<string, string> { [key ] =value });
+			Track (text, new Dictionary<string, string> { {key ,value} });
 		}
 
 		public static void Track (string text, Dictionary<string, string> args = null)
@@ -187,7 +187,7 @@ namespace SmartDocTestApp.Core.Services
 
 		public static TimeTrackingHandle TrackTime (string text, string key, string value)
 		{
-			return TrackTime (text, new Dictionary<string, string> { [key ] =value });
+			return TrackTime (text, new Dictionary<string, string> { {key ,value} });
 		}
 
 		public static TimeTrackingHandle TrackTime (string text, Dictionary<string, string> args = null)
