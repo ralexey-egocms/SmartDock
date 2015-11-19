@@ -52,7 +52,7 @@ namespace SmartDocTestApp.Core.Helpers
 			}
 		}
 
-		static string CreateParametrsString (Dictionary<RequestParams, string> parametrs)
+		public static string CreateParametrsString (Dictionary<RequestParams, string> parametrs)
 		{
 			if (parametrs != null || parametrs.Count > 0) {
 				string paramData = "?";
@@ -74,7 +74,7 @@ namespace SmartDocTestApp.Core.Helpers
 					client.BaseAddress = new Uri (urlTemplate);
 					client.Timeout = new TimeSpan (0, 0, 30);
 					var url = string.Format (UrlTemplate, controller != RequestController.None ? "/" + controller.ToString ().ToLower () : "", method.ToString ().ToLower (), CreateParametrsString (parametrs));
-//					var raw = new FormUrlEncodedContent (parametrs.ToDictionary (a => a.Key.ToString (), b => b.Value));
+					//					var raw = new FormUrlEncodedContent (parametrs.ToDictionary (a => a.Key.ToString (), b => b.Value));
 					var response = await client.GetAsync (url);
 
 					if (response.StatusCode != HttpStatusCode.OK) {
@@ -100,8 +100,8 @@ namespace SmartDocTestApp.Core.Helpers
 								Debug.WriteLine ("Method: {0} posted. Result: {1}", method.ToString (), resInt);
 								return (T)(object)resInt;
 							}
-                            //Debug.WriteLine ($"[{typename}]Response contained empty body or incorrect... Body:[{content}]");
-							LoggingService.Report (null, new Dictionary<string,string> {
+							//Debug.WriteLine ($"[{typename}]Response contained empty body or incorrect... Body:[{content}]");
+							LoggingService.Report (null, new Dictionary<string, string> {
 								{ "request",typename },
 								{ "content",content },
 							});
@@ -112,19 +112,19 @@ namespace SmartDocTestApp.Core.Helpers
 							if (ass != null)
 								Debug.WriteLine (String.Format ("=>GETTED [{0}] table.", typename));
 							else
-								LoggingService.Report (null, new Dictionary<string,string> {
+								LoggingService.Report (null, new Dictionary<string, string> {
 									{ "request",typename },
 									{ "content",content },
 								});
 							return ass;
 						}
-//						return XMLHelper.Deserialize<T> (content);
+						//						return XMLHelper.Deserialize<T> (content);
 					}
 				}
 
 			} catch (Exception ex) {
 				Debug.WriteLine (String.Format ("GETTING ERROR {0}", ex.Message));
-				LoggingService.Report (ex, new Dictionary<string,string> {
+				LoggingService.Report (ex, new Dictionary<string, string> {
 					{ "request",typeof(T).Name },
 					{ "content",content },
 				});
@@ -161,7 +161,7 @@ namespace SmartDocTestApp.Core.Helpers
 						return default(TResponse);
 					} else {
 						Debug.WriteLine ("ERROR: {0}", rawContent);
-//						result.Error = JsonConvert.DeserializeObject<ErrorWrapper> (rawContent).Error;
+						//						result.Error = JsonConvert.DeserializeObject<ErrorWrapper> (rawContent).Error;
 					}
 				}
 
@@ -194,14 +194,14 @@ namespace SmartDocTestApp.Core.Helpers
 			} catch (Exception exc) {
 				tcs.SetException (exc);
 			}
-			 
+
 			return tcs.Task;
 		}
 
 		public static Task<HttpWebResponse> GetResponseAsync (this HttpWebRequest request)
 		{
 			var tcs = new TaskCompletionSource<HttpWebResponse> ();
-			  
+
 			try {
 				request.BeginGetResponse (iar => {
 					try {
@@ -214,7 +214,7 @@ namespace SmartDocTestApp.Core.Helpers
 			} catch (Exception exc) {
 				tcs.SetException (exc);
 			}
-			  
+
 			return tcs.Task;
 		}
 	}
