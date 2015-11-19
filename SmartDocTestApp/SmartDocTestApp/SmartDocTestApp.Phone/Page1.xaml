@@ -43,7 +43,7 @@
             <Button Margin="10,220,10,0" VerticalAlignment="Top" Background="#FFFFED82" Foreground="#FF4C4C4C" BorderBrush="{x:Null}"
                     Command="{Binding OnLoginCommand}"
                     Content="{Binding TextSource,Converter={StaticResource Language},ConverterParameter=OnLoginButton, FallbackValue=OnLoginButton,Mode=OneTime}"/>
-            <TextBlock HorizontalAlignment="Left" Margin="199,280,0,0" TextWrapping="Wrap" Text="{Binding Error}" VerticalAlignment="Top" Foreground="#FFF70000"/>
+            <TextBlock Margin="0,280,0,0" TextWrapping="Wrap" Text="jkgkkuy  ufuyf jhgjkftytd" Foreground="#FFF70000" VerticalAlignment="Top" HorizontalAlignment="Center"/>
 
 
         </Grid>

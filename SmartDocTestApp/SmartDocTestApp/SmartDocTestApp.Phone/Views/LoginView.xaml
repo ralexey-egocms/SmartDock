@@ -31,20 +31,22 @@
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0,0,0,0" Background="#FF4B4B4B">
             <StackPanel Height="100" Margin="10,10,10,0" VerticalAlignment="Top" Background="Black">
                 <TextBlock x:Name="login_username_label" TextWrapping="Wrap" Foreground="#FF4C4C4C"
-                           Text="{Binding TextSource,Converter={StaticResource Language},ConverterParameter=Login, FallbackValue=Login,Mode=OneTime}" />
+                           Text="{Binding TextSource,Converter={StaticResource Language},ConverterParameter=Login, FallbackValue=Login,Mode=OneTime}" FontWeight="Bold" />
                 <TextBox x:Name="login_username" Height="72" TextWrapping="Wrap" Foreground="#FFFFED82" 
-                         Text="{Binding Login}"
+                         Text="{Binding Login, Mode=TwoWay}" BorderBrush="Transparent" Background="#00000000"
                          />
             </StackPanel>
             <StackPanel Height="100" Margin="10,115,10,0" VerticalAlignment="Top" Background="Black">
                 <TextBlock TextWrapping="Wrap"  Foreground="#FF4C4C4C"
-                           Text="{Binding TextSource,Converter={StaticResource Language},ConverterParameter=Password, FallbackValue=Password,Mode=OneTime}"/>
+                           Text="{Binding TextSource,Converter={StaticResource Language},ConverterParameter=Password, FallbackValue=Password,Mode=OneTime}" FontWeight="Bold"/>
                 <PasswordBox Height="72" Foreground="#FFFFED82"
-                         Password="{Binding Password}" />
+                         Password="{Binding Password, Mode=TwoWay}" SelectionForeground="#00000000" BorderBrush="Transparent" Background="Transparent" />
             </StackPanel>
             <Button Margin="10,220,10,0" VerticalAlignment="Top" Background="#FFFFED82" Foreground="#FF4C4C4C" BorderBrush="{x:Null}"
                     Command="{Binding OnLoginCommand}"
                     Content="{Binding TextSource,Converter={StaticResource Language},ConverterParameter=OnLoginButton, FallbackValue=OnLoginButton,Mode=OneTime}"/>
+            <TextBlock Margin="0,280,0,0" TextWrapping="Wrap" Text="{Binding Error}" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="#FFF70000"/>
+
 
         </Grid>
     </Grid>
