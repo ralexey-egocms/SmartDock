@@ -10,7 +10,7 @@ namespace SmartDocTestApp.Droid.Views
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
-			SetContentView (Resource.Layout.view_login);
+            SetContentView(Resource.Layout.view_login);
 		}
 	}
 }
