@@ -49,6 +49,11 @@
                 </phone:LongListSelector.ItemTemplate>
             </phone:LongListSelector>
 
+            <ProgressBar
+                x:Name="customIndeterminateProgressBar"
+                IsIndeterminate="{Binding IsLoading}"
+                Style="{StaticResource CustomIndeterminateProgressBar}"
+            />
         </Grid>
 
         <StackPanel Grid.Row="2" Background="#FF606060" Grid.ColumnSpan="2" Margin="0" VerticalAlignment="Bottom" Height="60">
