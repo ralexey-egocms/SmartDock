@@ -18,8 +18,22 @@ namespace SmartDocTestApp.Core
         {
             try
             {
-                HttpWebRequest request = HttpWebRequest.Create(
-                                             String.Format("https://www.smartdok.no/PublicAPI/login/authenticate?userName={0}&password={1}", username, password)) as HttpWebRequest;
+                var controller = RequestController.Login;
+                var method = RequestMethod.Authenticate;
+                var parametrs = new Dictionary<RequestParams, string> { {
+						RequestParams.userName,
+						username
+					}, {
+						RequestParams.password,
+						password
+					}
+				};
+                var url = string.Format(
+                              RESTinwork.UrlTemplate,
+                              controller != RequestController.None ? "/" + controller.ToString().ToLower() : "",
+                              method.ToString().ToLower(),
+                              RESTinwork.CreateParametrsString(parametrs));
+                HttpWebRequest request = HttpWebRequest.Create(url) as HttpWebRequest;
 
                 return await request.GetJsonAsync<LoginObject>() as LoginObject;
             }
@@ -46,7 +60,7 @@ namespace SmartDocTestApp.Core
 				};
 
                 var url = string.Format(
-                              "https://www.smartdok.no/PublicAPI{0}/{1}{2}",
+                              RESTinwork.UrlTemplate,
                               controller != RequestController.None ? "/" + controller.ToString().ToLower() : "",
                               method.ToString().ToLower(),
                               RESTinwork.CreateParametrsString(parametrs));

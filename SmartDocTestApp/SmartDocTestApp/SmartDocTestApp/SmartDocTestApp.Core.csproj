@@ -34,7 +34,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
-    <Compile Include="Helper\AsyncHelper.cs" />
     <Compile Include="Helper\JSONhelper.cs" />
     <Compile Include="Helper\LoggingService.cs" />
     <Compile Include="Helper\RESTpuller.cs" />
@@ -48,7 +47,6 @@
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="Data\MenuData.cs" />
     <Compile Include="Data\LoginObject.cs" />
-    <Compile Include="Helper\XMLHelper.cs" />
     <Compile Include="Services\Interfaces\IWebService.cs" />
     <Compile Include="Services\WebService.cs" />
     <Compile Include="Services\Interfaces\IPreferencesService.cs" />
@@ -106,7 +104,5 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
   </Target>
-  <ItemGroup>
-    <Folder Include="Data\" />
-  </ItemGroup>
+  <ItemGroup />
 </Project>
