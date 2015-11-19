@@ -24,22 +24,7 @@ namespace SmartDocTestApp.Core.ViewModels
 
             if (!string.IsNullOrEmpty(_preferences.Username) && !string.IsNullOrEmpty(_preferences.Password))
             {
-                Loginnn();
-                //                Task.Run(async () =>
-                //                {
-                //                    _currentStateService.CurrentUser = await _webService.LogInWP(_preferences.Username, _preferences.Password);
-                //                    if (_currentStateService.CurrentUser.IsValid)
-                //                    {
-                //                        ShowViewModel<MenuViewModel>();
-                //                    }
-                //                    else
-                //                    {
-                //                        Login = _preferences.Username;
-                //                        Password = _preferences.Password;
-                //
-                //                        Error = GetLocalizedError("UnexpectedError");
-                //                    }
-                //                });
+                LogInUser();
             }
         }
 
@@ -97,6 +82,7 @@ namespace SmartDocTestApp.Core.ViewModels
             {
                 return new MvxCommand(async () =>
                 {
+                    IsLoading = true;
                     Error = String.Empty;
                     if (string.IsNullOrEmpty(Login))
                         Error = GetLocalizedError("UsernameCannotBeEmpty");
@@ -119,12 +105,14 @@ namespace SmartDocTestApp.Core.ViewModels
                             Error = GetLocalizedError("PasswordNotMatch");
                         }
                     }
+                    IsLoading = false;
                 });
             }
         }
 
-        private async void Loginnn()
+        private async void LogInUser()
         {
+            IsLoading = true;
             _currentStateService.CurrentUser = await _webService.LogIn(_preferences.Username, _preferences.Password);
             if (_currentStateService.CurrentUser.IsValid)
             {
@@ -137,6 +125,7 @@ namespace SmartDocTestApp.Core.ViewModels
 
                 Error = GetLocalizedError("UnexpectedError");
             }
+            IsLoading = false;
         }
     }
 }

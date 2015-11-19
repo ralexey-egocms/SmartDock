@@ -39,15 +39,19 @@
             <StackPanel Height="100" Margin="10,115,10,0" VerticalAlignment="Top" Background="Black">
                 <TextBlock TextWrapping="Wrap"  Foreground="#FF4C4C4C"
                            Text="{Binding TextSource,Converter={StaticResource Language},ConverterParameter=Password, FallbackValue=Password,Mode=OneTime}" FontWeight="Bold"/>
-                <PasswordBox Height="72" Foreground="#FFFFED82"
+                <PasswordBox Height="72" Foreground="#FFFFED82" x:Name="login_password"
                          Password="{Binding Password, Mode=TwoWay}" SelectionForeground="#00000000" BorderBrush="Transparent" Background="Transparent" />
             </StackPanel>
             <Button Margin="10,220,10,0" VerticalAlignment="Top" Background="#FFFFED82" Foreground="#FF4C4C4C" BorderBrush="{x:Null}"
-                    Command="{Binding OnLoginCommand}"
+                    Command="{Binding OnLoginCommand}" x:Name="login_button"
                     Content="{Binding TextSource,Converter={StaticResource Language},ConverterParameter=OnLoginButton, FallbackValue=OnLoginButton,Mode=OneTime}"/>
             <TextBlock Margin="0,280,0,0" TextWrapping="Wrap" Text="{Binding Error}" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="#FFF70000"/>
 
-
+            <ProgressBar
+                x:Name="customIndeterminateProgressBar"
+                IsIndeterminate="{Binding IsLoading}"
+                Style="{StaticResource CustomIndeterminateProgressBar}"
+            />
         </Grid>
     </Grid>
 
