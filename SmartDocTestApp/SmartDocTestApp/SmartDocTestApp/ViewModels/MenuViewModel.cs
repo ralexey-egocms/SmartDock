@@ -2,6 +2,7 @@ using Cirrious.MvvmCross.ViewModels;
 using System.Collections.Generic;
 using Cirrious.CrossCore;
 using SmartDocTestApp.Core.Services.Interfaces;
+using System.Collections.ObjectModel;
 
 namespace SmartDocTestApp.Core.ViewModels
 {
@@ -27,6 +28,9 @@ namespace SmartDocTestApp.Core.ViewModels
                 new InstanseData(){Id = 5, Name = "Sixth"},
                 new InstanseData(){Id = 6, Name = "Seventh"},
                 new InstanseData(){Id = 7, Name = "Eightth"},
+                new InstanseData(){Id = 8, Name = "Nineth"},
+                new InstanseData(){Id = 9, Name = "Tenth"},
+                new InstanseData(){Id = 10, Name = "Eleventh"},
                 }
             };
 		}
@@ -36,6 +40,8 @@ namespace SmartDocTestApp.Core.ViewModels
 		public List<InstanseData> MenuItemSourse { 
 			get { return _menuData.Instances; }
 		}
+
+        public ObservableCollection<InstanseData> Items { get { return new ObservableCollection<InstanseData>(_menuData.Instances); } }
 
 		public string UserName {
 			get { 

@@ -180,6 +180,8 @@
     <Content Include="Assets\Tiles\IconicTileSmall.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Icon.png" />
+    <Content Include="Resources\logout_icon.png" />
     <Content Include="ToDo-MvvmCross\_ Windows Phone UI.txt" />
   </ItemGroup>
   <ItemGroup>
