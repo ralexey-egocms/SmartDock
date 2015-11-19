@@ -24,7 +24,7 @@
         <!--TitlePanel содержит имя приложения и заголовок страницы-->
         <StackPanel Grid.Row="0" Background="#FF606060" Grid.ColumnSpan="2" Margin="0" Orientation="Horizontal">
             <Button Content=""  Width="50" Height="50" Margin="5,0,0,0" Padding="0,0,0,15" FontSize="0.01" BorderThickness="0"
-                    Command="{Binding OnLoginCommand}">
+                    Command="{Binding OnLogOutCommand}">
                 <Button.Background>
                     <ImageBrush ImageSource="/Resources/logout_icon.png"/>
                 </Button.Background>
@@ -53,7 +53,7 @@
 
         <StackPanel Grid.Row="2" Background="#FF606060" Grid.ColumnSpan="2" Margin="0" VerticalAlignment="Bottom" Height="60">
             <TextBlock TextWrapping="Wrap" Margin="0,13,10,0" FontSize="25" HorizontalAlignment="Right" VerticalAlignment="Top" Foreground="#FFFFED82"
-                       Text="Name"/>
+                       Text="{Binding UserName}"/>
         </StackPanel>
         
     </Grid>
